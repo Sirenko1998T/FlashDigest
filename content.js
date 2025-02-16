@@ -1,5 +1,5 @@
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-   if (message.action === 'getText') {
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+   if (request.action === 'getText') {
       let text = document.body.innerText || '';
       sendResponse({ text: text });
    }

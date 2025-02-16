@@ -1,6 +1,6 @@
 document.getElementById('ai').addEventListener('click', () => {
    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-      if (tabs.length < 1) return; 
+      if (tabs.length < 1) return;
 
       chrome.scripting.executeScript(
          {
@@ -8,20 +8,28 @@ document.getElementById('ai').addEventListener('click', () => {
             files: ['content.js']
          },
          () => {
-            chrome.runtime.sendMessage(tabs[0].id, { action: 'getText'}, (response)=>{
-               if(response && response.text){
+            chrome.tabs.sendMessage(tabs[0].id, { action: 'getText' }, (response) => {
+               if (response && response.text) {
                   openEditor(response.text);
                }
-            })
+            });
          }
       );
    });
 });
 
-
-function openEditor (text){
+function openEditor(text) {
    let editorUrl = chrome.runtime.getURL('editor.html');
-   chrome.storage.local.set({'processGetText':text},()=>{
-      chrome.tabs.create({url: editorUrl});
-   })
+   chrome.storage.local.set({ 'processGetText': text }, () => {
+      chrome.tabs.query({}, (tabs)=>{
+         let foundTab = tabs.find(tab=> tab.url === editorUrl);
+         if(foundTab){
+            chrome.tabs.update(foundTab.id, {active:true});
+         }
+         else{
+            chrome.tabs.create({ url: editorUrl });
+         }
+      })
+   
+   });
 }
