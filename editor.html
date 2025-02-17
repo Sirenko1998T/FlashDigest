@@ -8,8 +8,8 @@
  </head>
  <body>
    <h1>FLASH DIGEST</h1>
-   <div class="textarea">
-<div class="toolbar">
+   <div class="editor">
+<div id="toolbar">
    <div class="toolbar_decor">
       <select name="" id="font">
          <option value="Calibri">Calibri</option>
@@ -20,17 +20,16 @@
       </select>
       <div class="fontSize">
          <a href="#" id="reduce" >-</a>
-         <input  id = "size" type="text">
+         <input value ='8' id = "size" type="text">
          <a href="#" id="increase" >+</a>
       </div>
       <a href="#" id="bold">B</a>
-      <a href="#" id="italics">I</a>
-      <a href="#" id="underlined">U</a>
-      <a href="#" id="color">A</a>
-      <a href="#" id="align-center"><img src="/editor icin/align-center.png" alt=""></a>
-      <a href="#" id="align-left"><img src="/editor icin/align-left.png" alt=""></a>
-      <a href="#" id="align-right"><img src="/editor icin/symbol.png" alt=""></a>
-      <a href="#" id="color"><img src="/editor icin/list.png" alt=""></a>
+      <a href="#" id="italic">I</a>
+      <a href="#" id="underline">U</a>
+      <a href="#" ><img id="alignCenter" src="/editor icin/align-center.png" alt=""></a>
+      <a href="#"><img   id="alignLeft" src="/editor icin/align-left.png" alt=""></a>
+      <a href="#" ><img id="alignRight" src="/editor icin/symbol.png" alt=""></a>
+      <a href="#" ><img  id="list" src="/editor icin/list.png" alt=""></a>
    </div>
   <div class="toolbar_send">
    <a href="#" id="telegram"><img src="/editor icin/telegram.png" alt=""></a>
@@ -41,7 +40,7 @@
 </div>
 
 
-      <textarea name="" id="textarea"></textarea></div>
+<div contenteditable="true"  id="textarea"></div>
    <script src="editor.js"></script>
  </body>
 </html>

@@ -4,7 +4,7 @@ body{
 h1{
    text-align: center;
 }
-.textarea{
+.editor{
 display: flex;
 align-items: center; 
  justify-content: center;
@@ -15,15 +15,15 @@ align-items: center;
 }
 #textarea{
   width:80%;
-   resize: none;
+   border: 1px solid black;
   height: auto;
   min-height: 500px;
 }
- .toolbar{
+ #toolbar{
       display: flex;
       justify-content: space-between;
    padding: 15px 0px;
-    width:80.5%;
+    width:80%;
    border: 1px solid black;
    border-bottom: none;
    background-color: #f0f4f9;
@@ -39,10 +39,12 @@ align-items: center;
    }
    #size{
       width: 15px;
+ 
       background-color: #f0f4f9;
       height: 12px;
       border:1 px solid black;
       border-radius: 5px;
+      text-align: center;
    }
 
 .toolbar_decor , .toolbar_send{
