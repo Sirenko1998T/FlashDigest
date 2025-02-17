@@ -4,10 +4,44 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
+   <link rel="stylesheet" href="editor.css">
  </head>
  <body>
-   <h1>editor</h1>
-   <textarea name="" id="textarea"></textarea>
+   <h1>FLASH DIGEST</h1>
+   <div class="textarea">
+<div class="toolbar">
+   <div class="toolbar_decor">
+      <select name="" id="font">
+         <option value="Calibri">Calibri</option>
+         <option value="Times New Roman">Times New Roman</option>
+         <option value="Arial">Arial </option>
+         <option value="Cambria ">Cambria </option>
+         <option value="Verdana ">Verdana </option>
+      </select>
+      <div class="fontSize">
+         <a href="#" id="reduce" >-</a>
+         <input  id = "size" type="text">
+         <a href="#" id="increase" >+</a>
+      </div>
+      <a href="#" id="bold">B</a>
+      <a href="#" id="italics">I</a>
+      <a href="#" id="underlined">U</a>
+      <a href="#" id="color">A</a>
+      <a href="#" id="align-center"><img src="/editor icin/align-center.png" alt=""></a>
+      <a href="#" id="align-left"><img src="/editor icin/align-left.png" alt=""></a>
+      <a href="#" id="align-right"><img src="/editor icin/symbol.png" alt=""></a>
+      <a href="#" id="color"><img src="/editor icin/list.png" alt=""></a>
+   </div>
+  <div class="toolbar_send">
+   <a href="#" id="telegram"><img src="/editor icin/telegram.png" alt=""></a>
+      <a href="#" id="downolad"><img src="/editor icin/download.png" alt=""></a>
+      <a href="#" id="mail"><img src="/editor icin/envelope.png" alt=""></a>
+  </div>
+
+</div>
+
+
+      <textarea name="" id="textarea"></textarea></div>
    <script src="editor.js"></script>
  </body>
 </html>
